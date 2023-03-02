@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1, 
+        "name": "Audi1",
+        "price": 11000,
+        "year": 2018
+    },
+    {
+        "id": 2, 
+        "name": "Audi2",
+        "price": 12000,
+        "year": 2019
+    },
+    {
+        "id": 3, 
+        "name": "Audi3",
+        "price": 13000,
+        "year": 2020
+    },
+    {
+        "id": 4, 
+        "name": "Audi4",
+        "price": 14000,
+        "year": 2021
+    },
+    {
+        "id": 5, 
+        "name": "Audi5",
+        "price": 15000,
+        "year": 2022
+    }
+]

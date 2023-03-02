@@ -14,10 +14,18 @@ const randomState = ref("");
 </script>
 
 <template>
+  <main>
   <div>
     {{ randomState }}
     <button @click="randomState = 'Hello'">Click me!</button>
     <Nav />
     <RouterView />
   </div>
+  </main>
 </template>
+
+<style scoped>
+main div{
+  margin: 20px 30px;
+}
+</style>
