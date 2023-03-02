@@ -3,30 +3,50 @@
         "id": 1, 
         "name": "Audi1",
         "price": 11000,
-        "year": 2018
+        "year": 2018,
+        "contact":{
+            "dealer": "Dealer1",
+            "number": "111-111-111"
+        }
     },
     {
         "id": 2, 
         "name": "Audi2",
         "price": 12000,
-        "year": 2019
+        "year": 2019,
+         "contact":{
+            "dealer": "Dealer2",
+            "number": "111-111-112"
+        }
     },
     {
         "id": 3, 
         "name": "Audi3",
         "price": 13000,
-        "year": 2020
+        "year": 2020,
+        "contact":{
+            "dealer": "Dealer3",
+            "number": "111-111-113"
+        }
     },
     {
         "id": 4, 
         "name": "Audi4",
         "price": 14000,
-        "year": 2021
+        "year": 2021, 
+         "contact":{
+            "dealer": "Dealer4",
+            "number": "111-111-114"
+        }
     },
     {
         "id": 5, 
         "name": "Audi5",
         "price": 15000,
-        "year": 2022
+        "year": 2022,
+        "contact":{
+            "dealer": "Dealer5",
+            "number": "111-111-115"
+        }
     }
 ]

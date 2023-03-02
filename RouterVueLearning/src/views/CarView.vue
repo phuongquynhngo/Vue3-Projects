@@ -1,7 +1,8 @@
 <script setup>
 // extract id from the  path
-import {useRoute} from "vue-router"
+import {useRoute, RouterView} from "vue-router"
 import cars from "../data/car.json"
+import ContactView from "./ContactView.vue";
 
 const route = useRoute()
 
@@ -17,5 +18,6 @@ console.log(route.params)
         <p>{{ car.name }}</p>
         <p>{{ car.year }}</p>
         <p>{{ car.price }}</p>
+        <RouterView/>
     </div>
 </template>
