@@ -1,12 +1,17 @@
 <script setup>
 // extract id from the  path
-import {useRoute, RouterView} from "vue-router"
+import {useRoute,useRouter, RouterView} from "vue-router"
 import cars from "../data/car.json"
-import ContactView from "./ContactView.vue";
 
+// the useRoute composable: extract information about this path
 const route = useRoute()
 
-const car = cars.find(c => c.id === parseInt(route.params.id))
+//the useRouteer composable: adjust the path
+const router =useRouter()
+console.log(router)
+
+const carId =parseInt(route.params.id)
+const car = cars.find(c => c.id === carId )
 
 console.log(route.params)
 </script>
@@ -18,6 +23,7 @@ console.log(route.params)
         <p>{{ car.name }}</p>
         <p>{{ car.year }}</p>
         <p>{{ car.price }}</p>
+        <button @click="router.push(`/cars/${carId}/contact`)">Click for contact</button>
         <RouterView/>
     </div>
 </template>
