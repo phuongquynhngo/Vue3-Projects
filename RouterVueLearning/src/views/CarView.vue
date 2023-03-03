@@ -14,6 +14,14 @@ const carId =parseInt(route.params.id)
 const car = cars.find(c => c.id === carId )
 
 console.log(route.params)
+
+const showContact = () =>{
+    if (carId === 3) return;
+    // does not show contact info when car id is 3
+    return router.push(`/cars/${carId}/contact`)
+}
+
+
 </script>
 
 <template>
@@ -23,7 +31,11 @@ console.log(route.params)
         <p>{{ car.name }}</p>
         <p>{{ car.year }}</p>
         <p>{{ car.price }}</p>
-        <button @click="router.push(`/cars/${carId}/contact`)">Click for contact</button>
+
+
+        <!-- <button @click="router.push(`/cars/${carId}/contact`)">Click for contact</button> -->
+        <button @click="showContact">Click for contact</button>
+        
         <RouterView/>
     </div>
 </template>
