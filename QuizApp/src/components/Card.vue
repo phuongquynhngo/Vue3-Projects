@@ -1,9 +1,21 @@
 <script setup>
 import { defineProps } from "vue";
-const { quiz } = defineProps(["quiz"]);
+import { useRouter } from "vue-router";
+
+
+const router = useRouter()
+
+const { quiz } = defineProps(["quiz"])
 // Passing Props to the Question Component
 
 // console.log(quiz);
+
+const showQuiz =() =>{
+  return router.push(`/quiz/${quiz.id}`)
+}
+
+
+
 </script>
 
 <template>
@@ -16,7 +28,7 @@ const { quiz } = defineProps(["quiz"]);
           <h2>{{quiz.name }}</h2>
           <p>{{ quiz.questions.length }} questions</p>
         </div> -->
-  <div class="card">
+  <div class="card" @click="showQuiz">
     <img :src="quiz.img" alt="" />
     <div class="card-text">
       <h2>{{ quiz.name }}</h2>
