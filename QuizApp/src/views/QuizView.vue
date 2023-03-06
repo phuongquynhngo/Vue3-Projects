@@ -2,7 +2,7 @@
 import Question from "../components/Question.vue";
 import QuizHeader from "../components/QuizHeader.vue";
 import { useRoute } from "vue-router";
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import quizes from "../data/quizes.json";
 
 const route = useRoute();
@@ -13,7 +13,12 @@ const quiz = quizes.find((q) => q.id === quizId);
 
 const currentQuestionIndex = ref(0);
 
-const questionStatus= `${currentQuestionIndex.value}/${quiz.questions.length}`
+const questionStatus= ref(`${currentQuestionIndex.value}/${quiz.questions.length}`)
+
+watch (() => currentQuestionIndex.value, ()=>{
+  console.log("currentQuestionIndex has changed")
+  questionStatus.value = `${currentQuestionIndex.value}/${quiz.questions.length}`
+})
 
 </script>
 <template>
