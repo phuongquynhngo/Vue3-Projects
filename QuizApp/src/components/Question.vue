@@ -1,7 +1,7 @@
 <script setup>
 import { defineProps } from "vue";
 
-const { quuestion } = defineProps(["question"])
+const { question } = defineProps(["question"])
 </script>
 
 

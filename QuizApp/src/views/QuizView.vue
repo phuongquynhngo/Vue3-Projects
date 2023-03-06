@@ -9,15 +9,19 @@ const route = useRoute();
 
 const quizId = parseInt(route.params.id);
 
+const quiz = quizes.find((q) => q.id === quizId);
+
 const currentQuestionIndex = ref(0);
 
-const quiz = quizes.find((q) => q.id === quizId);
+const questionStatus= `${currentQuestionIndex.value}/${quiz.questions.length}`
+
 </script>
 <template>
   <div>
-    <QuizHeader />
+    <QuizHeader :questionStatus="questionStatus"/>
     <div>
       <Question :question="quiz.questions[currentQuestionIndex]" />
     </div>
+    <button @click="currentQuestionIndex++">Next question</button>
   </div>
 </template>
